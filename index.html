@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your child's academic future with Success Hackademy - AI-powered personalized tutoring available 24/7">
+    <title>Transform Your Child's Future | Success Hackademy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .urgency-banner {
+            background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: clamp(18px, 3vw, 24px);
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            border: 4px solid #ff6b35;
+            border-radius: 12px;
+            box-shadow: 0 0 40px rgba(255, 107, 53, 0.4);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .video-container iframe {
+                height: 300px;
+            }
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+            color: #0a1628;
+            padding: 18px 50px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Bonuses Section */
+        .bonuses {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: clamp(24px, 4vw, 36px);
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ffd700;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            border-color: #ffed4e;
+        }
+
+        .bonus-title {
+            font-size: 22px;
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .bonus-value {
+            font-size: 18px;
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .bonus-description {
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            margin: 60px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: #ffd700;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .pricing-period {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 20px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
+
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #ffd700;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid #ff6b35;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .guarantee-title {
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-text {
+            font-size: 18px;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin: 60px 0;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 20px;
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        .footer-text {
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="urgency-banner">
+                ⏰ LIMITED TIME OFFER: Lock in Lifetime Discount + FREE Forever Bonus!
+            </div>
+            
+            <h1>Stop Watching Your Child Struggle... Start Watching Them THRIVE!</h1>
+            
+            <p class="subheadline">
+                Discover How Dr. AiNeal (with 100 Ph.D. Equivalents) Transforms C Students Into A+ Achievers in Just 30-90 Days
+            </p>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-container">
+            <iframe src="https://video.pictory.ai/embed/20251002133259823ffa4de050ed04906a983e4456cae9b98/20251003154803613syvS6PRHLUdoQe4"
+                title="Unlocking Your Child's Potential with Genius Study-Buddy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button">
+                YES! Transform My Child's Future Now →
+            </a>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">94%</div>
+                <div class="stat-label">Student Engagement Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">87%</div>
+                <div class="stat-label">Improved Test Scores</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">47</div>
+                <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$22K</div>
+                <div class="stat-label">Average Savings vs. Tutors</div>
+            </div>
+        </div>
+
+        <!-- Bonuses Section -->
+        <div class="bonuses">
+            <h2 class="section-title">🎁 Exclusive Bonuses Worth $1,497 - Yours FREE Today!</h2>
+            
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-title">BONUS #1: Genius Study-Buddy AI Tutor</div>
+                    <div class="bonus-value">Value: $997/year</div>
+                    <div class="bonus-description">
+                        24/7 personalized AI tutoring across all subjects. Adapts to your child's learning style and pace. Never pay for expensive tutors again!
+                    </div>
+                </div>
+                
+                <div class="bonus-card">
+                    <div class="bonus-title">BONUS #2: Parent Success Dashboard</div>
+                    <div class="bonus-value">Value: $297</div>
+                    <div class="bonus-description">
+                        Real-time progress tracking, detailed analytics, and weekly reports. Stay informed about your child's academic journey every step of the way.
+                    </div>
+                </div>
+                
+                <div class="bonus-card">
+                    <div class="bonus-title">BONUS #3: College Prep Masterclass</div>
+                    <div class="bonus-value">Value: $197</div>
+                    <div class="bonus-description">
+                        SAT/ACT prep strategies, college application guidance, and scholarship hunting secrets. Set your child up for success beyond high school.
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button">
+                    Claim All Bonuses + Lifetime Discount →
+                </a>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing">
+            <h2 class="section-title">Choose Your Success Path</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Monthly</div>
+                    <div class="pricing-price">$97</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li>Full Access to Dr. AiNeal</li>
+                        <li>All Subject Coverage</li>
+                        <li>24/7 AI Tutoring</li>
+                        <li>Progress Tracking</li>
+                        <li>Parent Dashboard</li>
+                        <li>Cancel Anytime</li>
+                    </ul>
+                    <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button" style="font-size: 18px; padding: 15px 40px;">
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">⭐ MOST POPULAR</div>
+                    <div class="pricing-title">Annual</div>
+                    <div class="pricing-price">$197</div>
+                    <div class="pricing-period">per year (save $970)</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Monthly</li>
+                        <li>Priority Support</li>
+                        <li>Exclusive Webinars</li>
+                        <li>Study Skills Workshops</li>
+                        <li>College Prep Resources</li>
+                        <li>Lifetime Discount Lock-in</li>
+                    </ul>
+                    <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button" style="font-size: 18px; padding: 15px 40px;">
+                        Save $970 Now
+                    </a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-title">Lifetime</div>
+                    <div class="pricing-price">$297</div>
+                    <div class="pricing-period">one-time payment</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Annual</li>
+                        <li>Lifetime Access</li>
+                        <li>All Future Updates FREE</li>
+                        <li>VIP Support</li>
+                        <li>Exclusive Community</li>
+                        <li>Best Value - Never Pay Again!</li>
+                    </ul>
+                    <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button" style="font-size: 18px; padding: 15px 40px;">
+                        Lock In Forever
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Offer -->
+        <div class="guarantee">
+            <h3 class="guarantee-title">🎯 SPECIAL REFERRAL BONUS: Get It FREE Forever!</h3>
+            <p class="guarantee-text">
+                Refer just 3 parents who want the best for their children + give us a 1-minute video testimonial = 
+                <strong style="color: #ffd700;">Your subscription becomes FREE FOR LIFE!</strong>
+                <br><br>
+                That's right - help 3 families transform their children's futures, and you'll never pay another cent. Ever.
+            </p>
+        </div>
+
+        <!-- Guarantee -->
+        <div class="guarantee">
+            <h3 class="guarantee-title">🛡️ 30-Day Money-Back Guarantee</h3>
+            <p class="guarantee-text">
+                Try Success Hackademy risk-free for 30 days. If your child doesn't show measurable improvement in engagement, 
+                confidence, or grades, we'll refund every penny. No questions asked. No hassle. No risk.
+                <br><br>
+                <strong style="color: #ffd700;">You have NOTHING to lose and your child's future to gain.</strong>
+            </p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: How is this different from other tutoring services?</div>
+                <div class="faq-answer">
+                    A: Dr. AiNeal has the equivalent of 100 Ph.D.s and is available 24/7 at a fraction of the cost of human tutors. 
+                    No scheduling conflicts, no commuting, no expensive hourly rates. Plus, it adapts to your child's unique learning style instantly.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What subjects does Success Hackademy cover?</div>
+                <div class="faq-answer">
+                    A: All core subjects: Math, Science, English, History, and more. From elementary through high school, 
+                    including SAT/ACT prep and college-level courses.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How quickly will I see results?</div>
+                <div class="faq-answer">
+                    A: Most parents report noticeable improvements in engagement and confidence within the first 2 weeks. 
+                    Grade improvements typically show up within 30-90 days, depending on your child's starting point and consistency of use.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Is this suitable for my child's age/grade level?</div>
+                <div class="faq-answer">
+                    A: Yes! Success Hackademy works for students from elementary school through college. 
+                    The AI adapts to any grade level and learning pace automatically.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What if my child needs help outside of school hours?</div>
+                <div class="faq-answer">
+                    A: That's the beauty of Dr. AiNeal - it's available 24/7/365. Whether it's 3 AM before a big test or 
+                    Sunday afternoon for homework help, your child always has support.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How does the referral program work?</div>
+                <div class="faq-answer">
+                    A: Simple! Refer 3 parents who sign up for Success Hackademy, record a 1-minute video testimonial about your experience, 
+                    and your subscription becomes FREE FOR LIFE. We'll provide you with a unique referral link and all the tools you need.
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div style="text-align: center; margin: 60px 0;">
+            <h2 class="section-title">Your Child's Future Starts NOW</h2>
+            <p class="subheadline" style="margin-bottom: 30px;">
+                Every day you wait is another day your child struggles. Don't let them fall further behind.
+            </p>
+            <a href="https://subtle-basbousa-4bc4b2.netlify.app/checkout.html" class="cta-button">
+                Transform My Child's Future Today →
+            </a>
+            <p style="margin-top: 20px; color: #b0b0b0; font-size: 14px;">
+                ✓ 30-Day Money-Back Guarantee &nbsp; | &nbsp; ✓ Instant Access &nbsp; | &nbsp; ✓ Cancel Anytime
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-text">
+                © 2025 Success Hackademy. All rights reserved.
+                <br>
+                Transforming students from struggling to thriving since 2024.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
